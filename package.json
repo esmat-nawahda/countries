@@ -1,6 +1,6 @@
 {
   "name": "countries-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An elegant TypeScript module to fetch information about countries from a comprehensive JSON data file.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
