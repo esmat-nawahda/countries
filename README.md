@@ -12,12 +12,12 @@ An elegant TypeScript module to fetch information about countries from a compreh
 
 ```bash
 # if your project uses npm
-npm install --save countries
+npm install --save countries-ts
 ```
 
 ```bash
 # if your project uses yarn
-yarn add countries
+yarn add countries-ts
 ```
 
 ## Usage 🚀
@@ -30,7 +30,8 @@ import {
   getByCurrency,
   getByLanguage,
   getByCountryCode,
-} from 'path_to_this_module';
+  listCountries
+} from 'countries-ts';
 ```
 
 ## API Reference 📘
