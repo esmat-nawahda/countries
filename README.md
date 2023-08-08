@@ -68,7 +68,7 @@ const englishSpeakingCountries = getByLanguage('en');
 getByCountryCode(countryCode: string): Country | undefined
 Retrieve country information using its phone code.
 ```ts
-const infoAboutIndia = getByCountryCode('+91');
+const infoAboutPalestine = getByCountryCode('+970');
 ```
 
 listCountries(): Country[]
