@@ -26,3 +26,7 @@ export const getByCountryCode = (countryCode: string): Country | undefined => {
     const result = countries.find((country: Country) => country.countryCode === countryCode);
     return result;
 }
+
+export const listCountries = (): Country[] => {
+    return countries;
+}
