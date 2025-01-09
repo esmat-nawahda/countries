@@ -218,6 +218,24 @@ export const countries: Country[] = [
     "isoCode": "036"
   },
   {
+    "label": "Austria",
+    "code": "AT",
+    "capital": "Vienna",
+    "region": "EU",
+    "currency": {
+      "code": "EUR",
+      "label": "Euro",
+      "symbol": "€"
+    },
+    "language": {
+      "code": "de",
+      "label": "German"
+    },
+    "flag": "https://flagcdn.com/48x36/at.png",
+    "countryCode": "+43",
+    "isoCode": "040"
+  },
+  {
     "label": "Azerbaijan",
     "code": "AZ",
     "capital": "Baku",
