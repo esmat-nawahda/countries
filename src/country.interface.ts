@@ -1,6 +1,8 @@
 export interface Country {
     label: string;
     code: string;
+    alpha2?: string;
+    alpha3?: string;
     capital: string;
     region: string;
     currency: {

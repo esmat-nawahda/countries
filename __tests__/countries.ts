@@ -1,6 +1,8 @@
 import {
   getByCodeArea,
   getByCode,
+  getByAlpha2,
+  getByAlpha3,
   getByCountry,
   getByCurrency,
   getByLanguage,
@@ -53,6 +55,41 @@ describe('Country Functions', () => {
     const result = getByCountry('Canada');
     expect(result).toBeDefined();
     expect(result?.code).toBe('CA');
+  });
+
+  it('should get by alpha-2 code', () => {
+    const result = getByAlpha2('US');
+    expect(result).toBeDefined();
+    expect(result?.label).toBe('United States of America');
+    expect(result?.code).toBe('US');
+    
+    // Test case insensitive
+    const resultLower = getByAlpha2('us');
+    expect(resultLower).toBeDefined();
+    expect(resultLower?.code).toBe('US');
+  });
+
+  it('should get by alpha-3 code', () => {
+    const result = getByAlpha3('USA');
+    expect(result).toBeDefined();
+    expect(result?.label).toBe('United States of America');
+    expect(result?.code).toBe('US');
+    
+    // Test case insensitive
+    const resultLower = getByAlpha3('usa');
+    expect(resultLower).toBeDefined();
+    expect(resultLower?.code).toBe('US');
+    
+    // Test another country
+    const canada = getByAlpha3('CAN');
+    expect(canada).toBeDefined();
+    expect(canada?.label).toBe('Canada');
+    expect(canada?.code).toBe('CA');
+  });
+
+  it('should return undefined for invalid alpha-3 code', () => {
+    const result = getByAlpha3('XXX');
+    expect(result).toBeUndefined();
   });
 
   it('should get by currency', () => {

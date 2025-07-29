@@ -1,5 +1,6 @@
 import { countries } from './countries';
 import { Country, CountryStats, RegionInfo, CurrencyInfo, LanguageInfo } from './country.interface';
+import { alpha3Codes } from './alpha3-codes';
 
 export const getByCodeArea = (region: string): Country[] => {
     const result = countries.filter((country: Country) => country.region === region);
@@ -8,6 +9,17 @@ export const getByCodeArea = (region: string): Country[] => {
 
 export const getByCode = (code: string): Country | undefined => {
     return countries.find((country: Country) => country.code === code);
+}
+
+export const getByAlpha2 = (alpha2: string): Country | undefined => {
+    return countries.find((country: Country) => country.code === alpha2.toUpperCase());
+}
+
+export const getByAlpha3 = (alpha3: string): Country | undefined => {
+    const alpha3Upper = alpha3.toUpperCase();
+    const alpha2Code = Object.entries(alpha3Codes).find(([_, a3]) => a3 === alpha3Upper)?.[0];
+    if (!alpha2Code) return undefined;
+    return countries.find((country: Country) => country.code === alpha2Code);
 }
 
 export const getByCountry = (countryName: string): Country | undefined => {

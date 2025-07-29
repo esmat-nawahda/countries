@@ -1,6 +1,6 @@
 {
   "name": "countries-ts",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A powerful TypeScript library with 60+ functions for country data - search, validate, format, compare, and more. Zero dependencies.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

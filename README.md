@@ -63,6 +63,20 @@ Get country by ISO 3166-1 alpha-2 code.
 const japan = getByCode('JP');
 ```
 
+#### `getByAlpha2(alpha2: string): Country | undefined`
+Get country by ISO 3166-1 alpha-2 code (case-insensitive).
+```typescript
+const usa = getByAlpha2('US');
+const uk = getByAlpha2('gb'); // Case-insensitive
+```
+
+#### `getByAlpha3(alpha3: string): Country | undefined`
+Get country by ISO 3166-1 alpha-3 code (case-insensitive).
+```typescript
+const germany = getByAlpha3('DEU');
+const canada = getByAlpha3('can'); // Case-insensitive
+```
+
 #### `getByCountry(name: string): Country | undefined`
 Get country by name.
 ```typescript
