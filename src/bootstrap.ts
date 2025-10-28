@@ -1,5 +1,5 @@
 import { countries } from './countries';
-import { Country, CountryStats, RegionInfo, CurrencyInfo, LanguageInfo } from './country.interface';
+import { Country, CountryStats, RegionInfo, CurrencyInfo, LanguageInfo, RegionCode, RegionName } from './country.interface';
 import { alpha3Codes } from './alpha3-codes';
 
 export const getByCodeArea = (region: string): Country[] => {
@@ -78,12 +78,12 @@ export const getByCurrencySymbol = (symbol: string): Country[] => {
 }
 
 // Region/Continent utilities
-export const getRegions = (): string[] => {
+export const getRegions = (): RegionCode[] => {
     const regions = new Set(countries.map(country => country.region));
     return Array.from(regions).sort();
 }
 
-export const getCountriesByRegions = (regions: string[]): Country[] => {
+export const getCountriesByRegions = (regions: RegionCode[]): Country[] => {
     return countries.filter((country: Country) => regions.includes(country.region));
 }
 
@@ -559,7 +559,7 @@ export const validateCountryCodes = (codes: string[]): { valid: string[]; invali
 }
 
 // Region name mapping
-const regionNames: { [key: string]: string } = {
+const regionNames: Record<RegionCode, RegionName> = {
     'AF': 'Africa',
     'AS': 'Asia',
     'EU': 'Europe',
@@ -569,7 +569,7 @@ const regionNames: { [key: string]: string } = {
     'AN': 'Antarctica'
 };
 
-export const getRegionName = (regionCode: string): string => {
+export const getRegionName = (regionCode: RegionCode): RegionName => {
     return regionNames[regionCode] || regionCode;
 }
 

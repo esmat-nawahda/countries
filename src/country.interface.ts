@@ -1,10 +1,13 @@
+export type RegionCode = "AF" | "AS" | "EU" | "OC" | "NA" | "SA" | "AN";
+export type RegionName = "Africa"  | "Asia" | "Europe" | "North America" |"Oceania" | "South America" | "Antarctica";
+
 export interface Country {
     label: string;
     code: string;
     alpha2?: string;
     alpha3?: string;
     capital: string;
-    region: string;
+    region: RegionCode;
     currency: {
         code: string;
         label: string;
@@ -28,8 +31,8 @@ export interface Country {
 }
 
 export interface RegionInfo {
-    code: string;
-    name: string;
+    code: RegionCode;
+    name: RegionName;
     countries: number;
 }
 
