@@ -1599,7 +1599,7 @@ export const countries: Country[] = [
     "label": "Haiti",
     "code": "HT",
     "capital": "Port-au-Prince",
-    "region": "Americas",
+    "region": "SA",
     "currency": {
       "code": "HTG",
       "label": "Haitian gourde",
@@ -2319,7 +2319,7 @@ export const countries: Country[] = [
     "label": "Martinique",
     "code": "MQ",
     "capital": "Fort-de-France",
-    "region": "Americas",
+    "region": "SA",
     "currency": {
       "code": "EUR",
       "label": "Euro",
